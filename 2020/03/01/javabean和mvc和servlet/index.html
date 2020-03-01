@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/3 | Hexo</title>
+  <title>javabean和mvc和servlet | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2020/03/index.html">
+  <meta name="description" content="安全：PreparedStatement可以有效的防止sql注入JavaBeana.public 修饰的类，public无参构造 b.所有的属性都是private，并且提高set和get方法（如果boolean 则get可以替换成is）使用层面，javabean分为2大类： a.封装业务逻辑的JavaBean b.封装数据的JavaBean，对应数据库的一张表MVC设计模式a.model层：mod">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javabean和mvc和servlet">
+<meta property="og:url" content="http://yoursite.com/2020/03/01/javabean%E5%92%8Cmvc%E5%92%8Cservlet/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="安全：PreparedStatement可以有效的防止sql注入JavaBeana.public 修饰的类，public无参构造 b.所有的属性都是private，并且提高set和get方法（如果boolean 则get可以替换成is）使用层面，javabean分为2大类： a.封装业务逻辑的JavaBean b.封装数据的JavaBean，对应数据库的一张表MVC设计模式a.model层：mod">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-03-01T09:47:01.898Z">
+<meta property="article:modified_time" content="2020-02-25T15:51:37.558Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -150,184 +154,231 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-javabean和mvc和servlet" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/01/ajax/" class="archive-article-date">
-  	<time datetime="2020-03-01T09:47:26.373Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-01</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/01/ajax/">ajax</a>
+    <h1 class="article-title" itemprop="name">
+      javabean和mvc和servlet
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/01/maven/" class="archive-article-date">
-  	<time datetime="2020-03-01T09:47:19.419Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/01/maven/">maven</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/01/javabean%E5%92%8Cmvc%E5%92%8Cservlet/" class="archive-article-date">
+        
+        <a href="/2020/03/01/javabean%E5%92%8Cmvc%E5%92%8Cservlet/" class="archive-article-date">
   	<time datetime="2020-03-01T09:47:01.898Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-01</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/01/javabean%E5%92%8Cmvc%E5%92%8Cservlet/">javabean和mvc和servlet</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="安全：PreparedStatement可以有效的防止sql注入"><a href="#安全：PreparedStatement可以有效的防止sql注入" class="headerlink" title="安全：PreparedStatement可以有效的防止sql注入"></a>安全：PreparedStatement可以有效的防止sql注入</h1><h1 id="JavaBean"><a href="#JavaBean" class="headerlink" title="JavaBean"></a>JavaBean</h1><pre><code>a.public 修饰的类，public无参构造
+b.所有的属性都是private，并且提高set和get方法（如果boolean 则get可以替换成is）</code></pre><p>使用层面，javabean分为2大类：</p>
+<pre><code>a.封装业务逻辑的JavaBean
+b.封装数据的JavaBean，对应数据库的一张表</code></pre><h1 id="MVC设计模式"><a href="#MVC设计模式" class="headerlink" title="MVC设计模式"></a>MVC设计模式</h1><pre><code>a.model层：model模型(处理逻辑或数据的JavaBean)
+b.view层：负责页面的展示（前端）
+c.controller层：控制器：
+接受请求，将请求跳转到模型进行处理；
+模型处理完毕后，再将处理的结果返回给请求处。一般建议使用servlet实现控制器</code></pre><h1 id="三层架构"><a href="#三层架构" class="headerlink" title="三层架构"></a>三层架构</h1><pre><code>于MVC设计模式的目标一致：都时为了解耦合、提高代码的复用性
+区别：二者对项目的理解的角度不同
 
-        <div class="article-info info-on-right">
-          
-          
+三层组成：
+表示层：(USL,User Show Layer; 视图层)
+业务逻辑层：(BLL,Business Logic Layer; Service层)
+数据访问层：(DAL,Data Access Layer;Dao层)</code></pre><h1 id="Servlet"><a href="#Servlet" class="headerlink" title="Servlet"></a>Servlet</h1><pre><code>继承HttpServlet父类
+重写其中的doGet和foPost方法
+a.接受 并处理 所有的get提交方式的请求
+b.接受 并处理 所有post提交方式的请求
 
+servlet要想使用，必须配置
+Servlet2.5：web.xml
+Servlet要想使用必须配置web.xml
+
+Servlet3.0：@WebServlet
+Servlet3.0不需要在web.xml中配置，
+但需要在Servlet类的定义处之上编写“注解”@WebServlet(&quot;url-pattern&quot;);
+
+匹配流程：请求地址和@WebServlet中的值进行匹配，
+如果匹配成功，则说明请求的就是该注解所对应的类</code></pre><p>eclipse自动生成servlet，注意类目要和url名一致</p>
+<html>
+web中的一些配置方法
+</html>
+
+<pre><code>&lt;servlet&gt;
+    &lt;servlet-name&gt;a&lt;/servlet-name&gt;
+    &lt;servlet-class&gt;zhangdeju.servlet.ServletWelcome&lt;/servlet-class&gt;
+    &lt;/servlet&gt;
+&lt;servlet-mapping&gt;
+      &lt;servlet-name&gt;a&lt;/servlet-name&gt;
+      &lt;url-pattern&gt;/ServletWelcome&lt;/url-pattern&gt;
+&lt;/servlet-mapping&gt;</code></pre><h1 id="Servlet的生命周期"><a href="#Servlet的生命周期" class="headerlink" title="Servlet的生命周期"></a>Servlet的生命周期</h1><pre><code>加载
+初始化： init()方法，该方法会在Servlet被加载并实例化的以后执行
+服务： service() --&gt; doGet() doPost
+销毁： destory() Servlet被系统回收时执行
+卸载
+
+加载和卸载时Servlet自动处理
+
+
+init()    是在第一次访问Servlet时执行，只执行一次
+Service() 调用几次则执行几次
+destroy() 关闭tomcat服务设计执行一次</code></pre><h1 id="Servlet-API"><a href="#Servlet-API" class="headerlink" title="Servlet API"></a>Servlet API</h1><pre><code>ServletConfig：接口
+getServletContext：获取Servlet的上下文对象  application
+getInitParameter(String name)： 在当前Servlet范围内，获取名为name的参数值(初始化参数)
+
+a.ServletContext中的常见方法（application）：
+b.getContextPath（）相对路径
+c.getRealPath（）绝对路径
+setAttribute（）、getAttribute（）
+--&gt;
+String getInitParameter(String name)
+在当前Web容器内获取名为name的参数值（初始化参数）
+
+//设置当前servlet的一个参数值
+@WebServlet(value = &quot;/ServletWelcome&quot;,loadOnStartup = 1,initParams = {@WebInitParam(name=&quot;servletparamname30&quot;,value=&quot;servletparamvalue30&quot;)})
+Servlet3.0如果想要获取全局的值也需要在web.xml中进行配置
+
+
+Service依赖于Dao</code></pre>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/03/01/javabean%E5%92%8Cmvc%E5%92%8Cservlet/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/01/javase/" class="archive-article-date">
-  	<time datetime="2020-03-01T09:46:56.237Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-01</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2020/03/01/maven/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          maven
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/03/01/javase/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">javase</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/01/javase/">javase</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/01/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2020-03-01T08:41:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/01/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一篇博客文章</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/01/hello-world/" class="archive-article-date">
-  	<time datetime="2020-03-01T08:32:47.221Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/01/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -350,8 +401,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

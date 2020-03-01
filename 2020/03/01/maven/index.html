@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/3 | Hexo</title>
+  <title>maven | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2020/03/index.html">
+  <meta name="description" content="maven的作用a.管理Jar        1.增加第三方jar     11.jar包之间的依赖关系，自动关联下载所有的依赖的jar包，并且不会冲突 b.将项目拆分为若干个模块maven的概念是一个基于Java平台的 自动化构建工具  make-ant-maven-gradle    清理：删除编译的结果，为重新编译做准备 编译：java--class 测试：针对于 项目中的关键点进行测试，亦">
+<meta property="og:type" content="article">
+<meta property="og:title" content="maven">
+<meta property="og:url" content="http://yoursite.com/2020/03/01/maven/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="maven的作用a.管理Jar        1.增加第三方jar     11.jar包之间的依赖关系，自动关联下载所有的依赖的jar包，并且不会冲突 b.将项目拆分为若干个模块maven的概念是一个基于Java平台的 自动化构建工具  make-ant-maven-gradle    清理：删除编译的结果，为重新编译做准备 编译：java--class 测试：针对于 项目中的关键点进行测试，亦">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-03-01T09:47:19.419Z">
+<meta property="article:modified_time" content="2020-03-01T09:44:23.357Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -150,184 +154,233 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-maven" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/01/ajax/" class="archive-article-date">
-  	<time datetime="2020-03-01T09:47:26.373Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-01</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/01/ajax/">ajax</a>
+    <h1 class="article-title" itemprop="name">
+      maven
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/01/maven/" class="archive-article-date">
+        
+        <a href="/2020/03/01/maven/" class="archive-article-date">
   	<time datetime="2020-03-01T09:47:19.419Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-01</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/01/maven/">maven</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="maven的作用"><a href="#maven的作用" class="headerlink" title="maven的作用"></a>maven的作用</h1><pre><code>a.管理Jar   
+    1.增加第三方jar
+    11.jar包之间的依赖关系，自动关联下载所有的依赖的jar包，并且不会冲突
+b.将项目拆分为若干个模块</code></pre><h1 id="maven的概念"><a href="#maven的概念" class="headerlink" title="maven的概念"></a>maven的概念</h1><pre><code>是一个基于Java平台的 自动化构建工具
 
-        <div class="article-info info-on-right">
-          
-          
+make-ant-maven-gradle
 
+
+
+清理：删除编译的结果，为重新编译做准备
+编译：java--class
+测试：针对于 项目中的关键点进行测试，亦可用 项目中的测试代码去测试开发代码
+打包：将多个文件压缩成一个文件（java项目-jar包，web项目--war包）
+安装：将打成的包  放到 本地仓库
+部署：将打成的包  放到  服务器中准备运行
+      ---将java、js、jsp等各种文件进行 筛选、组装、变成一个可以直接运行的项目</code></pre><h5 id="Eclipse中部署的web项目可以运行"><a href="#Eclipse中部署的web项目可以运行" class="headerlink" title="-Eclipse中部署的web项目可以运行"></a>-Eclipse中部署的web项目可以运行</h5><h5 id="将Eclipse中的项目，复制到tomcat-webapps中则不能运行"><a href="#将Eclipse中的项目，复制到tomcat-webapps中则不能运行" class="headerlink" title="-将Eclipse中的项目，复制到tomcat/webapps中则不能运行"></a>-将Eclipse中的项目，复制到tomcat/webapps中则不能运行</h5><h5 id="项目可以在webapps中直接运行"><a href="#项目可以在webapps中直接运行" class="headerlink" title="-项目可以在webapps中直接运行"></a>-项目可以在webapps中直接运行</h5><h5 id="Eclipse中的项目，在部署时-会-生成一个-对应的部署项目（在webapps中），区别在于：部署项目的目录结构少几个文件，因为二者目录结构不一致，因此tomcat中无法直接运行Eclipse中复制过来的项目"><a href="#Eclipse中的项目，在部署时-会-生成一个-对应的部署项目（在webapps中），区别在于：部署项目的目录结构少几个文件，因为二者目录结构不一致，因此tomcat中无法直接运行Eclipse中复制过来的项目" class="headerlink" title="-Eclipse中的项目，在部署时 会 生成一个 对应的部署项目（在webapps中），区别在于：部署项目的目录结构少几个文件，因为二者目录结构不一致，因此tomcat中无法直接运行Eclipse中复制过来的项目"></a>-Eclipse中的项目，在部署时 会 生成一个 对应的部署项目（在webapps中），区别在于：部署项目的目录结构少几个文件，因为二者目录结构不一致，因此tomcat中无法直接运行Eclipse中复制过来的项目</h5><h5 id="Eclipse中的项目要在tomcat中部署，就需要打成一个war包"><a href="#Eclipse中的项目要在tomcat中部署，就需要打成一个war包" class="headerlink" title="-Eclipse中的项目要在tomcat中部署，就需要打成一个war包"></a>-Eclipse中的项目要在tomcat中部署，就需要打成一个war包</h5><h1 id="下载配置maven"><a href="#下载配置maven" class="headerlink" title="下载配置maven"></a>下载配置maven</h1><pre><code>1.配置JAVA_HOME
+2.配置MAVEN_HOME: 
+      或者M2_HOME
+3.配置path
+      %MAVEN_HOME%\bin
+4.验证:
+    mvn -v
+5.配置本地仓库：
+    默认本地仓库：C:/Users/ThinkPad/.m2/repository
+    修改本地仓库:    &lt;localRepository&gt;D:/study/mavenrepository&lt;/localRepository&gt;</code></pre><h1 id="使用maven"><a href="#使用maven" class="headerlink" title="使用maven"></a>使用maven</h1><pre><code>约定大于配置
+    maven约定的目录结构：
+        项目:
+            -src
+                --main
+                    ---java  :程序功能代码
+                    ---resources :资源代码、配置代码
+                 --test
+                    ---java
+                    ---resources
+            -pom.xml          :项目对象模型
+
+
+依赖：
+A中的某些类 需要使用B中的某些类，则称A依赖于B
+在maven项目中，如果要使用 一个 当时 存在的Jar或模块 ，则可以通过依赖实现（去本地仓库，远程仓库中去找）
+
+执行mav：必须在pom.xml所在的目录中执行</code></pre><h1 id="maven常用命令-第一次执行命令，需要在中央仓库中下载一些基础jar包"><a href="#maven常用命令-第一次执行命令，需要在中央仓库中下载一些基础jar包" class="headerlink" title="maven常用命令(第一次执行命令，需要在中央仓库中下载一些基础jar包)"></a>maven常用命令(第一次执行命令，需要在中央仓库中下载一些基础jar包)</h1><pre><code>编译：（基础jar包--&gt;本地仓库（没有）---&gt;远程仓库）
+1.mvn compile  编译命令：只编译在main目录的文件
+2.mvn test     测试命令
+3.mvn package  打包
+4.mvn install  将开发的模块放入本地仓库，供其他模块使用(放入的位置是通过gav决定的)
+5.mvn clean   删除target目录（删除编译文件的目录）</code></pre><p>依赖的范围、依赖的有效性<br>compile（默认）  test   provided</p>
+<pre><code>scope的分类
+
+compile
+
+默认就是compile，什么都不配置也就是意味着compile。compile表示被依赖项目需要参与当前项目的编译，当然后续的测试，运行周期也参与其中，是一个比较强的依赖。打包的时候通常需要包含进去。
+
+test
+
+scope为test表示依赖项目仅仅参与测试相关的工作，包括测试代码的编译，执行。比较典型的如junit。
+
+runntime
+
+runntime表示被依赖项目无需参与项目的编译，不过后期的测试和运行周期需要其参与。与compile相比，跳过编译而已，说实话在终端的项目（非开源，企业内部系统）中，和compile区别不是很大。比较常见的如JSR×××的实现，对应的API jar是compile的，具体实现是runtime的，compile只需要知道接口就足够了。oracle jdbc驱动架包就是一个很好的例子，一般scope为runntime。另外runntime的依赖通常和optional搭配使用，optional为true。我可以用A实现，也可以用B实现。
+
+provided
+
+provided意味着打包的时候可以不用包进去，别的设施(Web Container)会提供。事实上该依赖理论上可以参与编译，测试，运行等周期。相当于compile，但是在打包阶段做了exclude的动作。
+
+system
+
+从参与度来说，也provided相同，不过被依赖项不会从maven仓库抓，而是从本地文件系统拿，一定需要配合systemPath属性使用。</code></pre><h1 id="在Eclipse中创建maven工程"><a href="#在Eclipse中创建maven工程" class="headerlink" title="在Eclipse中创建maven工程"></a>在Eclipse中创建maven工程</h1><pre><code>1.配置maven
+    配置maven
+    配置本地仓库</code></pre>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/03/01/maven/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/01/javabean%E5%92%8Cmvc%E5%92%8Cservlet/" class="archive-article-date">
-  	<time datetime="2020-03-01T09:47:01.898Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-01</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2020/03/01/ajax/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          ajax
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/03/01/javabean%E5%92%8Cmvc%E5%92%8Cservlet/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">javabean和mvc和servlet</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/01/javabean%E5%92%8Cmvc%E5%92%8Cservlet/">javabean和mvc和servlet</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/01/javase/" class="archive-article-date">
-  	<time datetime="2020-03-01T09:46:56.237Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/01/javase/">javase</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/01/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2020-03-01T08:41:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/01/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一篇博客文章</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/01/hello-world/" class="archive-article-date">
-  	<time datetime="2020-03-01T08:32:47.221Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/01/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -350,8 +403,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

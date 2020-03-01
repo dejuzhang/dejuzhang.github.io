@@ -152,6 +152,650 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-ajax" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/01/ajax/">ajax</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/01/ajax/" class="archive-article-date">
+  	<time datetime="2020-03-01T09:47:26.373Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="异步js和xml"><a href="#异步js和xml" class="headerlink" title="异步js和xml"></a>异步js和xml</h1><p>异步刷新：只刷新需要刷新的地方</p>
+<p>实现：<br>js：XMLHttpRequest对象<br>XMLHttpRequest对象的方法：<br>open(方法名（提交方式get/post）,服务器的地址,true)：与服务器建立链接<br>send()：<br>    get：send(null)<br>    post: send(“参数名”+参数值)<br>setRequestHeader(header,value):<br>    get:不需要设置此方法<br>    post：需要设置：<br>        a.如果请求元素中包含了文件上传：<br>            setRequestHeader(“conten-type”,”multipart/form-data”);</p>
+<pre><code>b.如果不包含文件上传
+    setRequestHeader(&quot;Content-Type&quot;,&quot;application/x-www-form-urlencoded;charset=UTF-8&quot;);</code></pre><p>XMLHttpRequest的属性：<br>readyState：请求状态 只有状态4 代表请求完毕<br>status：响应状态 只有200代表响应正常<br>onreadystatechange：回调函数<br>responseText：响应格式为String<br>responseXML：响应格式为XMl</p>
+<h1 id="jquery方式实现ajax：推荐"><a href="#jquery方式实现ajax：推荐" class="headerlink" title="jquery方式实现ajax：推荐"></a>jquery方式实现ajax：推荐</h1><p> $.ajax({<br>     url:服务器地址<br>     请求方式：get|post<br>     data：请求数据<br>     success:function(result,testStatus){</p>
+<pre><code>},
+erroe:function(){
+
+}</code></pre><p> });</p>
+<p> $.post(<br> 服务器地址，<br> 请求数据,<br> success:function(result){</p>
+<p> },<br>    “xml” 或 “json” 或 “text”<br> );</p>
+<p> $get(</p>
+<p> );</p>
+<p> $(id选择器).load(<br> 服务器地址,<br> 请求数据,<br> );</p>
+<p> load：将服务端的返回值  直接加载到$(xxx)所选择的元素中</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/01/ajax/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-maven" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/01/maven/">maven</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/01/maven/" class="archive-article-date">
+  	<time datetime="2020-03-01T09:47:19.419Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="maven的作用"><a href="#maven的作用" class="headerlink" title="maven的作用"></a>maven的作用</h1><pre><code>a.管理Jar   
+    1.增加第三方jar
+    11.jar包之间的依赖关系，自动关联下载所有的依赖的jar包，并且不会冲突
+b.将项目拆分为若干个模块</code></pre><h1 id="maven的概念"><a href="#maven的概念" class="headerlink" title="maven的概念"></a>maven的概念</h1><pre><code>是一个基于Java平台的 自动化构建工具
+
+make-ant-maven-gradle
+
+
+
+清理：删除编译的结果，为重新编译做准备
+编译：java--class
+测试：针对于 项目中的关键点进行测试，亦可用 项目中的测试代码去测试开发代码
+打包：将多个文件压缩成一个文件（java项目-jar包，web项目--war包）
+安装：将打成的包  放到 本地仓库
+部署：将打成的包  放到  服务器中准备运行
+      ---将java、js、jsp等各种文件进行 筛选、组装、变成一个可以直接运行的项目</code></pre><h5 id="Eclipse中部署的web项目可以运行"><a href="#Eclipse中部署的web项目可以运行" class="headerlink" title="-Eclipse中部署的web项目可以运行"></a>-Eclipse中部署的web项目可以运行</h5><h5 id="将Eclipse中的项目，复制到tomcat-webapps中则不能运行"><a href="#将Eclipse中的项目，复制到tomcat-webapps中则不能运行" class="headerlink" title="-将Eclipse中的项目，复制到tomcat/webapps中则不能运行"></a>-将Eclipse中的项目，复制到tomcat/webapps中则不能运行</h5><h5 id="项目可以在webapps中直接运行"><a href="#项目可以在webapps中直接运行" class="headerlink" title="-项目可以在webapps中直接运行"></a>-项目可以在webapps中直接运行</h5><h5 id="Eclipse中的项目，在部署时-会-生成一个-对应的部署项目（在webapps中），区别在于：部署项目的目录结构少几个文件，因为二者目录结构不一致，因此tomcat中无法直接运行Eclipse中复制过来的项目"><a href="#Eclipse中的项目，在部署时-会-生成一个-对应的部署项目（在webapps中），区别在于：部署项目的目录结构少几个文件，因为二者目录结构不一致，因此tomcat中无法直接运行Eclipse中复制过来的项目" class="headerlink" title="-Eclipse中的项目，在部署时 会 生成一个 对应的部署项目（在webapps中），区别在于：部署项目的目录结构少几个文件，因为二者目录结构不一致，因此tomcat中无法直接运行Eclipse中复制过来的项目"></a>-Eclipse中的项目，在部署时 会 生成一个 对应的部署项目（在webapps中），区别在于：部署项目的目录结构少几个文件，因为二者目录结构不一致，因此tomcat中无法直接运行Eclipse中复制过来的项目</h5><h5 id="Eclipse中的项目要在tomcat中部署，就需要打成一个war包"><a href="#Eclipse中的项目要在tomcat中部署，就需要打成一个war包" class="headerlink" title="-Eclipse中的项目要在tomcat中部署，就需要打成一个war包"></a>-Eclipse中的项目要在tomcat中部署，就需要打成一个war包</h5><h1 id="下载配置maven"><a href="#下载配置maven" class="headerlink" title="下载配置maven"></a>下载配置maven</h1><pre><code>1.配置JAVA_HOME
+2.配置MAVEN_HOME: 
+      或者M2_HOME
+3.配置path
+      %MAVEN_HOME%\bin
+4.验证:
+    mvn -v
+5.配置本地仓库：
+    默认本地仓库：C:/Users/ThinkPad/.m2/repository
+    修改本地仓库:    &lt;localRepository&gt;D:/study/mavenrepository&lt;/localRepository&gt;</code></pre><h1 id="使用maven"><a href="#使用maven" class="headerlink" title="使用maven"></a>使用maven</h1><pre><code>约定大于配置
+    maven约定的目录结构：
+        项目:
+            -src
+                --main
+                    ---java  :程序功能代码
+                    ---resources :资源代码、配置代码
+                 --test
+                    ---java
+                    ---resources
+            -pom.xml          :项目对象模型
+
+
+依赖：
+A中的某些类 需要使用B中的某些类，则称A依赖于B
+在maven项目中，如果要使用 一个 当时 存在的Jar或模块 ，则可以通过依赖实现（去本地仓库，远程仓库中去找）
+
+执行mav：必须在pom.xml所在的目录中执行</code></pre><h1 id="maven常用命令-第一次执行命令，需要在中央仓库中下载一些基础jar包"><a href="#maven常用命令-第一次执行命令，需要在中央仓库中下载一些基础jar包" class="headerlink" title="maven常用命令(第一次执行命令，需要在中央仓库中下载一些基础jar包)"></a>maven常用命令(第一次执行命令，需要在中央仓库中下载一些基础jar包)</h1><pre><code>编译：（基础jar包--&gt;本地仓库（没有）---&gt;远程仓库）
+1.mvn compile  编译命令：只编译在main目录的文件
+2.mvn test     测试命令
+3.mvn package  打包
+4.mvn install  将开发的模块放入本地仓库，供其他模块使用(放入的位置是通过gav决定的)
+5.mvn clean   删除target目录（删除编译文件的目录）</code></pre><p>依赖的范围、依赖的有效性<br>compile（默认）  test   provided</p>
+<pre><code>scope的分类
+
+compile
+
+默认就是compile，什么都不配置也就是意味着compile。compile表示被依赖项目需要参与当前项目的编译，当然后续的测试，运行周期也参与其中，是一个比较强的依赖。打包的时候通常需要包含进去。
+
+test
+
+scope为test表示依赖项目仅仅参与测试相关的工作，包括测试代码的编译，执行。比较典型的如junit。
+
+runntime
+
+runntime表示被依赖项目无需参与项目的编译，不过后期的测试和运行周期需要其参与。与compile相比，跳过编译而已，说实话在终端的项目（非开源，企业内部系统）中，和compile区别不是很大。比较常见的如JSR×××的实现，对应的API jar是compile的，具体实现是runtime的，compile只需要知道接口就足够了。oracle jdbc驱动架包就是一个很好的例子，一般scope为runntime。另外runntime的依赖通常和optional搭配使用，optional为true。我可以用A实现，也可以用B实现。
+
+provided
+
+provided意味着打包的时候可以不用包进去，别的设施(Web Container)会提供。事实上该依赖理论上可以参与编译，测试，运行等周期。相当于compile，但是在打包阶段做了exclude的动作。
+
+system
+
+从参与度来说，也provided相同，不过被依赖项不会从maven仓库抓，而是从本地文件系统拿，一定需要配合systemPath属性使用。</code></pre><h1 id="在Eclipse中创建maven工程"><a href="#在Eclipse中创建maven工程" class="headerlink" title="在Eclipse中创建maven工程"></a>在Eclipse中创建maven工程</h1><pre><code>1.配置maven
+    配置maven
+    配置本地仓库</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/01/maven/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-javabean和mvc和servlet" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/01/javabean%E5%92%8Cmvc%E5%92%8Cservlet/">javabean和mvc和servlet</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/01/javabean%E5%92%8Cmvc%E5%92%8Cservlet/" class="archive-article-date">
+  	<time datetime="2020-03-01T09:47:01.898Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="安全：PreparedStatement可以有效的防止sql注入"><a href="#安全：PreparedStatement可以有效的防止sql注入" class="headerlink" title="安全：PreparedStatement可以有效的防止sql注入"></a>安全：PreparedStatement可以有效的防止sql注入</h1><h1 id="JavaBean"><a href="#JavaBean" class="headerlink" title="JavaBean"></a>JavaBean</h1><pre><code>a.public 修饰的类，public无参构造
+b.所有的属性都是private，并且提高set和get方法（如果boolean 则get可以替换成is）</code></pre><p>使用层面，javabean分为2大类：</p>
+<pre><code>a.封装业务逻辑的JavaBean
+b.封装数据的JavaBean，对应数据库的一张表</code></pre><h1 id="MVC设计模式"><a href="#MVC设计模式" class="headerlink" title="MVC设计模式"></a>MVC设计模式</h1><pre><code>a.model层：model模型(处理逻辑或数据的JavaBean)
+b.view层：负责页面的展示（前端）
+c.controller层：控制器：
+接受请求，将请求跳转到模型进行处理；
+模型处理完毕后，再将处理的结果返回给请求处。一般建议使用servlet实现控制器</code></pre><h1 id="三层架构"><a href="#三层架构" class="headerlink" title="三层架构"></a>三层架构</h1><pre><code>于MVC设计模式的目标一致：都时为了解耦合、提高代码的复用性
+区别：二者对项目的理解的角度不同
+
+三层组成：
+表示层：(USL,User Show Layer; 视图层)
+业务逻辑层：(BLL,Business Logic Layer; Service层)
+数据访问层：(DAL,Data Access Layer;Dao层)</code></pre><h1 id="Servlet"><a href="#Servlet" class="headerlink" title="Servlet"></a>Servlet</h1><pre><code>继承HttpServlet父类
+重写其中的doGet和foPost方法
+a.接受 并处理 所有的get提交方式的请求
+b.接受 并处理 所有post提交方式的请求
+
+servlet要想使用，必须配置
+Servlet2.5：web.xml
+Servlet要想使用必须配置web.xml
+
+Servlet3.0：@WebServlet
+Servlet3.0不需要在web.xml中配置，
+但需要在Servlet类的定义处之上编写“注解”@WebServlet(&quot;url-pattern&quot;);
+
+匹配流程：请求地址和@WebServlet中的值进行匹配，
+如果匹配成功，则说明请求的就是该注解所对应的类</code></pre><p>eclipse自动生成servlet，注意类目要和url名一致</p>
+<html>
+web中的一些配置方法
+</html>
+
+<pre><code>&lt;servlet&gt;
+    &lt;servlet-name&gt;a&lt;/servlet-name&gt;
+    &lt;servlet-class&gt;zhangdeju.servlet.ServletWelcome&lt;/servlet-class&gt;
+    &lt;/servlet&gt;
+&lt;servlet-mapping&gt;
+      &lt;servlet-name&gt;a&lt;/servlet-name&gt;
+      &lt;url-pattern&gt;/ServletWelcome&lt;/url-pattern&gt;
+&lt;/servlet-mapping&gt;</code></pre><h1 id="Servlet的生命周期"><a href="#Servlet的生命周期" class="headerlink" title="Servlet的生命周期"></a>Servlet的生命周期</h1><pre><code>加载
+初始化： init()方法，该方法会在Servlet被加载并实例化的以后执行
+服务： service() --&gt; doGet() doPost
+销毁： destory() Servlet被系统回收时执行
+卸载
+
+加载和卸载时Servlet自动处理
+
+
+init()    是在第一次访问Servlet时执行，只执行一次
+Service() 调用几次则执行几次
+destroy() 关闭tomcat服务设计执行一次</code></pre><h1 id="Servlet-API"><a href="#Servlet-API" class="headerlink" title="Servlet API"></a>Servlet API</h1><pre><code>ServletConfig：接口
+getServletContext：获取Servlet的上下文对象  application
+getInitParameter(String name)： 在当前Servlet范围内，获取名为name的参数值(初始化参数)
+
+a.ServletContext中的常见方法（application）：
+b.getContextPath（）相对路径
+c.getRealPath（）绝对路径
+setAttribute（）、getAttribute（）
+--&gt;
+String getInitParameter(String name)
+在当前Web容器内获取名为name的参数值（初始化参数）
+
+//设置当前servlet的一个参数值
+@WebServlet(value = &quot;/ServletWelcome&quot;,loadOnStartup = 1,initParams = {@WebInitParam(name=&quot;servletparamname30&quot;,value=&quot;servletparamvalue30&quot;)})
+Servlet3.0如果想要获取全局的值也需要在web.xml中进行配置
+
+
+Service依赖于Dao</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/01/javabean%E5%92%8Cmvc%E5%92%8Cservlet/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-javase" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/01/javase/">javase</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/01/javase/" class="archive-article-date">
+  	<time datetime="2020-03-01T09:46:56.237Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="JAVA-NOTES"><a href="#JAVA-NOTES" class="headerlink" title="JAVA NOTES:"></a>JAVA NOTES:</h1><pre><code>1. // [comment]
+Single line comment.
+
+2. /* [comment] */
+Multi line comment.
+
+3. public
+This can be imported publically.
+
+4. import [object].*
+Imports everything in object.
+
+5. static
+Going to be shared by every [object].
+
+6. final
+Cannot be changed; common to be defined with all uppercase.
+
+7. double
+Integer with numbers that can have decimals.
+
+8. ;
+Put after every command.
+
+9. String
+Just a string of characters.
+
+10. Private
+Can only be changed by a method.
+
+11. int
+Can store numbers from 2^-31 to 2^31.
+
+12. fields are attributes
+
+13. boolean
+Can have true or false as the value.
+
+14. { }
+These are used to start and end a function, class, etc.
+
+15. byte
+These can store from -127 - 128.
+
+16. long
+Can store numbers from 2^127 to 2^-127.
+
+17. char
+Just lets you put in one chracter.
+
+18. double
+64-bit number with decimals.
+
+19. float
+32-bit number with decimals.
+
+20. protected
+Can only be accessed by other code in the package.
+
+21. Scanner
+This lets you get user input.
+
+22. new [object constructor]
+This will let you create a new object.
+
+23. System.in
+This lets you get data from the keyboard.
+
+24. public [class]()
+This will be the constructor, you use it to create new objects.
+
+25. super()
+This will create the superclass (the class it&apos;s inheriting).
+
+26. extends [class]
+Makes the object a subclass of [object], [object] must be a superclass.
+
+27. ++
+Will increment the amount.
+
+28. --
+Will decrement the amount.
+
+29. += [amount]
+Increment by [amount]
+
+30. -= [amount]
+Decrement by [amount]
+
+31. *= [amount]
+Multiply by [amount]
+
+32. /= [amount]
+Divide by [amount]
+
+33. System.out.println([text])
+Will print something to the output console.
+
+34. +
+Can be used for concatenation. (ex. &quot;6&quot; + [var_here])
+
+35. public static void main(String[] args)
+This is your main function and your project will start in here.
+
+36. System.out.print([text])
+This prints stuff but there is no line break. (/n)
+
+37. \n
+Called a line break; will print a new line.
+
+38. \t
+This will print a tab.
+
+39. if ([condition])
+This will make it so if [condition] is true then it&apos;ll keep going.
+
+40. &amp;&amp;
+This means and.
+
+41. !
+This means not.
+
+42. ||
+This means or.
+
+43. ==
+This means equal to.
+
+44. &lt;
+This means less than.
+
+45. &gt;
+This means greater than.
+
+46. &gt;=
+This means greater than or equal to.
+
+47. [inputVarHere].hasNextLine()
+This will return if there is a next line in the input.
+
+48. this
+Refer to the class that you are in.
+
+49. [caller].next[datatype]()
+This will get the [datatype] that you somehow inputted.
+
+50. Create getters and setters
+This will create the get methods and set methods for every checked variable.
+
+51. [caller].hasNext[datatype]()
+This will return if it has the correct datatype within the input.
+
+52. overloading
+If you have different parameters you can call them whatever way you want.
+
+53. parameters
+These are the inputs of your function.
+
+54. ([datatype])[variable]
+This will convert [variable] into [datatype]. Also known as casting.
+
+55. Math.random()
+Generate an extremely percise string of numbers between 0 and 1.
+
+56. Primitives
+Just the basic data types which are not objects.
+
+57. [x].toString()
+Will convert [x] into a string.
+
+58. [number].parse[numbertype]([string])
+This will parse [number] into the [numbertype] with [string].
+
+59. ^
+Return true if there is one true and one false.
+
+60. !=
+Not equal too. (NEQ)
+
+61. ([condition]) ? [amount] : [var]
+This will be like a shortcut way to an if statement.
+
+62. switch([variable])
+This will do stuff with specific cases. (e.g. switch(hi){ case 2: (do stuff)})
+
+63. case [value]:
+This will do stuff if the case is the case.
+
+64. break
+Put that when you want to leave the loop/switch; should be at end of case.
+
+65. default [value]:
+This will do stuff if none of the cases in the switch statement was made.
+
+66. for ([number]; [condition]; [operation])
+This will start at [number] and then do [operation] until [condition] is met.
+
+67. continue
+This will just go back to the enclosing loop before reaching other code.
+
+68. while ([condition])
+This will basically do something while [condition] is true.
+
+69. void
+This means no return type.
+
+70. return
+This will return something when you call it to where it was called from .
+
+71. do { } while ([condition])
+Guarantees it will execute once even if [condition] isn&apos;t met.
+
+72. printf(&quot;%[type] stuff here bah bla&quot;, [variable here])
+This will let you use [variable here] with %s being where.
+
+73. System.out.printf([text])
+Another way to print? // didn&apos;t quite get but ok then
+
+74. [type] [returntype] [name]([parameters]) {
+This is a way to create a method.
+
+75. [type][[indexes]]
+This will create an array with [indexes] amount of indexes; default infinite.
+
+76. int[] something = new int[20];
+This will just make an array of ints with 20 ints in it.
+
+77. for ([object] [nameOfObject] : [arrayOfObject]) {
+This will iterate through all of the arrayOfObject with object in use incrementing by 1 until done.
+
+78. [object][[1]][[2]][[3]] [name] = {[value] [value] [value] \n [value] [value] [value]}
+[1] is how many down in array, [2] how many accross in array, [3] how many groups
+
+79. .length
+This will get how long something is, text, amount of indexes in array, etc.
+
+80. Arrays.copy0f([array], indexes);
+This will copy the array and how many indexes into another array.
+
+81. Arrays.toString([array])
+Convert the whole array into one huge string.
+
+82. Arrays.binarySearch([array], [object])
+This will search for [object] in [array].
+
+Might not be very consise but it should do the trick.</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/01/javase/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-我的第一篇博客文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
